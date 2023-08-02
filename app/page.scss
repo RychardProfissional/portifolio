@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
-
 body
 {
     background-color: #282a36;
-    min-height: 100vh;
+    min-height: 160vh;
 }
 
 .page
@@ -24,9 +22,20 @@ body
         
         h2
         {
+            font-size: 3em;
+            font-family: 'Bree Serif', serif;
+            font-weight: 100;
+            letter-spacing: 1px;
+
             margin-bottom: 50px;
             text-align: center;
-            font-size: 3em;
+        }
+
+        p
+        {
+            text-indent: 1.5em;
+            font-family: 'Noticia Text', serif;
+            text-align: justify;
         }
     }
 }
@@ -39,6 +48,7 @@ body
     
     padding: 30px 50px;
     width: 30vw;
+    position: fixed;
     
     font-family: 'Bree Serif', serif;
 
@@ -61,7 +71,7 @@ body
 
             letter-spacing: 2px;
 
-            max-width: 345px;
+            max-width: 70em;
         }
     }
     
@@ -75,11 +85,19 @@ body
             display: flex;
             align-items: center;
             justify-content: center;
+            margin: 1.3em;
             
             .link
             {
                 font-size: 1.3em;
                 text-align: center;
+                transition: .5s;
+
+                &:hover
+                {
+                    color: #44475a;
+                    cursor: pointer;
+                }
             }
         }
     }
