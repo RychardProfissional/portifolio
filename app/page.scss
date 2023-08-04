@@ -48,7 +48,6 @@ body
     
     padding: 30px 50px;
     width: 30vw;
-    position: fixed;
     
     font-family: 'Bree Serif', serif;
 
@@ -89,14 +88,28 @@ body
             
             .link
             {
+                display: relative;
                 font-size: 1.3em;
                 text-align: center;
                 transition: .5s;
+                position: relative;
 
-                &:hover
+                &::before
                 {
-                    color: #44475a;
-                    cursor: pointer;
+                    content: "";
+                    width: 100%;
+                    height: 2px;
+                    bottom: 0;
+                    visibility: hidden;
+                    transform: scaleX(0);
+                    background-color: red;
+                    position: absolute;
+                    transition: all .3s ease-in-out 0s;
+                }
+                &:hover:before
+                {
+                    visibility: visible;
+                    transform: scaleX(1);
                 }
             }
         }

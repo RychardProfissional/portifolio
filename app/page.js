@@ -1,6 +1,6 @@
 import './page.scss'
-import Image from "next/image"
 import Menu from './components/menu'
+import TypingEffect from './components/typingEffect'
 
 export default function Home()
 {
@@ -9,6 +9,9 @@ export default function Home()
       <Menu />
 
       <div className="content">
+        <section className='presentation'>
+          <TypingEffect size={0} text={"vai tomar no cú"}/>
+        </section>
         <section className="about">
           <h2>Sobre mim</h2>
           <p>
