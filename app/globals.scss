@@ -1,4 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@font-face
+{
+  font-family: 'Bree Serif';
+  src: url('/public/fontes/Bree_Serif/BreeSerif-Regular.ttf')
+}
+
+@font-face
+{
+  font-family: 'Noticia Text';
+  src: url('/public/fontes/Noticia_Text/NoticiaText-Regular.ttf')
+}
+
+@font-face
+{
+  font-family: 'Noticia Text';
+  font-weight: bold;
+  src: url('/public/fontes/Noticia_Text/NoticiaText-Bold.ttf');
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400&display=swap');
 
 *
