@@ -4,4 +4,27 @@
     width: 3px;
     background-color: red;
     height: 16px;
+    animation: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink
+{
+    0%
+    {
+        opacity: 100%;
+    }
+    50%
+    {
+        opacity: 100%;
+    }
+    60%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 0;
+    }
 }

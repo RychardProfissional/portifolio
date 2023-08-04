@@ -1,11 +1,12 @@
 'use client'
 
 import './index.scss'
-import React from 'react';
+import {useState, useEffect} from 'react';
 
-export default function typingEffect({text = ''})
+export default function TypingEffect({text = ''})
 {
-    const [value, setValue] = React.useState('')
+    const [value, setValue] = useState('')
+    
 
     function nextText(textsIndex= 0, letterIndex = 1, growing = true)
     {
@@ -13,19 +14,19 @@ export default function typingEffect({text = ''})
 
         if (growing)
         {
-            if (text.length < letterIndex) growing = false
-            setTimeout(() => nextText(textsIndex, letterIndex + 1, growing), 200)
+            growing = text.length > letterIndex
+            setTimeout(() => nextText(textsIndex, letterIndex + 1, growing), growing? 200: 500)
         }
         else if(letterIndex == 0)
         {
             growing = true
             text.length > textsIndex? textsIndex = 0: textsIndex++
-            setTimeout(nextText(textsIndex, letterIndex, growing), 400)
+            setTimeout(nextText(textsIndex, letterIndex, growing), 500)
         }
         else setTimeout(() => nextText(textsIndex, letterIndex - 1, growing), 100)
     }
 
-    React.useEffect(() => {if (text) setTimeout(()=> nextText(), 1000)}, [])
+    useEffect(() => {if (text) setTimeout(()=> nextText(), 1000)}, [])
     
     return (
         <div>
