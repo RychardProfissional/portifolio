@@ -7,7 +7,6 @@ export default function TypingEffect({text = ''})
 {
     const [value, setValue] = useState('')
     
-
     function nextText(textsIndex= 0, letterIndex = 1, growing = true)
     {
         setValue(text.substring(0, letterIndex))
@@ -26,7 +25,7 @@ export default function TypingEffect({text = ''})
         else setTimeout(() => nextText(textsIndex, letterIndex - 1, growing), 100)
     }
 
-    useEffect(() => {if (text) setTimeout(()=> nextText(), 1000)}, [])
+    useEffect(() => {if (text) setTimeout(nextText)}, [])
     
     return (
         <div>

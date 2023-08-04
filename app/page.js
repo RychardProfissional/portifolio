@@ -1,6 +1,8 @@
 import './page.scss'
 import Menu from './components/menu'
 import TypingEffect from './components/typingEffect'
+import {Noticia_Text} from 'next/font/google'
+const noticia_text = Noticia_Text({subsets: ['latin'], weight: ['400', '700']})
 
 export default function Home()
 {
@@ -8,9 +10,9 @@ export default function Home()
     <div className="page">
       <Menu />
 
-      <div className="content">
+      <div className={"content " + noticia_text.className} >
         <section className='presentation'>
-          <TypingEffect size={0} text={"vai tomar no cú"}/>
+          <TypingEffect size={0} text={"blá blá blá"}/>
         </section>
         <section className="about">
           <h2>Sobre mim</h2>
