@@ -7,3 +7,18 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+
+.blink::after
+{
+  animation: blink_animation;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+
+@keyframes blink_animation
+{
+    0%{opacity: 100%;}
+    55% {opacity: 100%;}
+    65% {opacity: 0;}
+    100% {opacity: 0;}
+}

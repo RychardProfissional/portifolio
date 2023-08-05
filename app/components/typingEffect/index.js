@@ -3,33 +3,38 @@
 import './index.scss'
 import {useState, useEffect} from 'react';
 
-export default function TypingEffect({text = ''})
+export default function TypingEffect({texts = [''], speeds = {writing: 0, respire: 0}, className = ""})
 {
     const [value, setValue] = useState('')
+    const [animation, setAnimation] = useState('')
     
     function nextText(textsIndex= 0, letterIndex = 1, growing = true)
     {
+        let text = texts[textsIndex];
         setValue(text.substring(0, letterIndex))
-
         if (growing)
         {
             growing = text.length > letterIndex
-            setTimeout(() => nextText(textsIndex, letterIndex + 1, growing), growing? 200: 500)
+            setTimeout(() => nextText(textsIndex, letterIndex + 1, growing), growing? speeds.writing || 200: speeds.respire || 1000)
+            setAnimation(growing? "":"blink")
         }
         else if(letterIndex == 0)
         {
             growing = true
-            text.length > textsIndex? textsIndex = 0: textsIndex++
+            textsIndex = texts.length -1 <= textsIndex? 0: textsIndex + 1
+
             setTimeout(nextText(textsIndex, letterIndex, growing), 500)
         }
-        else setTimeout(() => nextText(textsIndex, letterIndex - 1, growing), 100)
+        else 
+        {
+            setAnimation("")
+            setTimeout(() => nextText(textsIndex, letterIndex - 1, growing), 100)
+        }
     }
 
-    useEffect(() => {if (text) setTimeout(nextText)}, [])
+    useEffect(() => { if (texts.length) setTimeout(nextText)}, [])
     
     return (
-        <div>
-            <div>{value}<div className="cursor"> </div></div>
-        </div>
+        <div className={className + " typed-text " + animation}>{value}</div>
     )
 }
