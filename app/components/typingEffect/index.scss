@@ -4,10 +4,13 @@
 }
 .typed-text::after
 {
-    position: absolute;
     content: '';
-    background-color: blue;
-    height: 100%;
+
+    position: absolute;
+    background-color: var(--cor-line-primary);
     margin-left: 2px;
+    opacity: 50%;
+
+    height: 100%;
     width: 2px
 }

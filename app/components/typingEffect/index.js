@@ -15,7 +15,7 @@ export default function TypingEffect({texts = [''], speeds = {writing: 0, respir
         if (growing)
         {
             growing = text.length > letterIndex
-            setTimeout(() => nextText(textsIndex, letterIndex + 1, growing), growing? speeds.writing || 200: speeds.respire || 1000)
+            setTimeout(() => nextText(textsIndex, letterIndex + 1, growing), growing? speeds.writing || 200: speeds.respire || 2000)
             setAnimation(growing? "": "blink")
         }
         else if(letterIndex == 0)
