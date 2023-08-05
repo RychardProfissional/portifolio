@@ -16,7 +16,7 @@ export default function TypingEffect({texts = [''], speeds = {writing: 0, respir
         {
             growing = text.length > letterIndex
             setTimeout(() => nextText(textsIndex, letterIndex + 1, growing), growing? speeds.writing || 200: speeds.respire || 1000)
-            setAnimation(growing? "":"blink")
+            setAnimation(growing? "": "blink")
         }
         else if(letterIndex == 0)
         {
@@ -35,6 +35,6 @@ export default function TypingEffect({texts = [''], speeds = {writing: 0, respir
     useEffect(() => { if (texts.length) setTimeout(nextText)}, [])
     
     return (
-        <div className={className + " typed-text " + animation}>{value}</div>
+        <span className={className + " typed-text " + animation}>{value}</span>
     )
 }

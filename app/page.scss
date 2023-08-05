@@ -1,19 +1,22 @@
 body
 {
-    background-color: #282a36;
+    background-color: var(--cor-background-primary);
     min-height: 160vh;
 }
 
 .page
 {
     display: flex;
-    padding: 20px;
 }
 
 .content
 {
     width: 100%;
     padding: 70px;
+    background-color: var(--cor-background-secundary);
+    border-bottom-left-radius: 20px;
+    box-shadow: inset 3px -3px 8px rgba(0, 0, 0, 0.705);
+
     section
     {
         display: flex;
@@ -33,79 +36,6 @@ body
         {
             text-indent: 1.5em;
             text-align: justify;
-        }
-    }
-}
-
-.container-menu
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-    padding: 30px 50px;
-    width: 30vw;
-
-    border-right: 3px solid #44475a;
-
-    .info
-    {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        margin-bottom: 30px;
-
-        h1
-        {
-            font-size: 2em;
-            text-align: center;
-
-            letter-spacing: 2px;
-
-            max-width: 70em;
-        }
-    }
-    
-    .menu
-    {
-        display: flex; 
-        flex-direction: column;
-
-        .item
-        {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 1.3em;
-            
-            .link
-            {
-                display: relative;
-                font-size: 1.3em;
-                text-align: center;
-                transition: .5s;
-                position: relative;
-
-                &::before
-                {
-                    content: "";
-                    width: 100%;
-                    height: 2px;
-                    bottom: 0;
-                    visibility: hidden;
-                    transform: scaleX(0);
-                    background-color: red;
-                    position: absolute;
-                    transition: all .3s ease-in-out 0s;
-                }
-                &:hover:before
-                {
-                    visibility: visible;
-                    transform: scaleX(1);
-                }
-            }
         }
     }
 }

@@ -12,7 +12,7 @@ export default function Home()
 
       <div className={"content " + noticia_text.className} >
         <section className='presentation'>
-          <TypingEffect size={0} texts={["blá blá blá", "só sei que nada sei"]}/>
+          <p>Olá, meu nome é Rychard e eu sou um <TypingEffect size={0} texts={["Programador", "Estudante", "Desenvolvedor"]}/></p>
         </section>
         <section className="about">
           <h2>Sobre mim</h2>

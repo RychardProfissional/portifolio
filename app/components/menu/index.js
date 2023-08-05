@@ -1,4 +1,5 @@
 import { Bree_Serif } from "@next/font/google"
+import './index.scss'
 
 const bree_serif = Bree_Serif({
     subsets: ['latin'],
@@ -8,15 +9,15 @@ const bree_serif = Bree_Serif({
 export default function Menu()
 {
     return (
-        <div className={"container-menu "+ bree_serif.className}>
+        <div className={"content-menu "+ bree_serif.className}>
             <main className="info">
                 <h1>Rychard Antony Pereira de Arruda</h1>
             </main>
             <nav className="menu">
-                <li className="item"><a className="link">Home</a></li>
-                <li className="item"><a className="link">Sobre</a></li>
-                <li className="item"><a className="link">seilaasdf</a></li>
-                <li className="item"><a className="link">seilaa</a></li>
+                <li className="item"><a className="link" href="#">Home</a></li>
+                <li className="item"><a className="link" href="#">Sobre</a></li>
+                <li className="item"><a className="link" href="#">seilaasdf</a></li>
+                <li className="item"><a className="link" href="#">seilaa</a></li>
             </nav>
         </div>
     )
