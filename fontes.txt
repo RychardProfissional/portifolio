@@ -1,0 +1,12 @@
+inspiração das cores: Dracula
+incons: 
+    <a href="https://iconscout.com/icons/css3" target="_blank">Free Css3 Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia" target="_blank">Icon Mafia</a>
+    <a href="https://iconscout.com/icons/html" target="_blank">Free Html Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia" target="_blank">Icon Mafia</a>
+    <a href="https://iconscout.com/icons/javascript" target="_blank">Free Javascript Icon</a> by <a href="https://iconscout.com/contributors/maninderkaur">maninderkaur</a> on <a href="https://iconscout.com">IconScout</a>
+    <a href="https://iconscout.com/icons/javascript" target="_blank">Free Javascript Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia" target="_blank">Icon Mafia</a>
+    <a href="https://iconscout.com/icons/react" target="_blank">Free React Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia">Icon Mafia</a> on <a href="https://iconscout.com">IconScout</a>
+    <a href="https://iconscout.com/icons/php" target="_blank">Free Php Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia">Icon Mafia</a> on <a href="https://iconscout.com">IconScout</a>
+    <a href="https://iconscout.com/icons/sql" target="_blank">Free Sql Icon</a> by <a href="https://iconscout.com/contributors/ravindra-kalkani" target="_blank">Ravindra Kalkani</a>
+    <a href="https://iconscout.com/icons/c" target="_blank">Free C Icon</a> by <a href="https://iconscout.com/contributors/arseniyivanov">Arseniy Ivanov</a> on <a href="https://iconscout.com">IconScout</a>
+    <a href="https://iconscout.com/icons/sass" target="_blank">Free Sass Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia">Icon Mafia</a> on <a href="https://iconscout.com">IconScout</a>
+fonts: eu escolhi direto do google fonts

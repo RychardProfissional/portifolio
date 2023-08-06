@@ -1,11 +1,7 @@
 import { Bree_Serif } from "@next/font/google"
 import './index.scss'
 
-const bree_serif = Bree_Serif({
-    subsets: ['latin'],
-    weight: '400'
-})
-
+const bree_serif = Bree_Serif({subsets: ['latin'], weight: '400'})
 export default function Menu()
 {
     return (
