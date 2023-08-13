@@ -1,27 +1,39 @@
 body
 {
     background-color: var(--cor-background-primary);
-    min-height: 160vh;
 }
 
-.presentation
+.presentation, .closure
 {
     display: flex;
+    align-items: center;
 }
 
-.information
+.information, .about
 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 70px;
+
+    background-color: var(--cor-background-secundary);
+    box-shadow: inset -3px 3px 8px var(--cor-shadow);
+}
+
+.about
+{
+    border-top-right-radius: 20px;
+    min-height: 600px;
+}
+
+.information
+{
     
     width: 100%;
-    padding: 70px;
     border-bottom-left-radius: 20px;
-    
-    background-color: var(--cor-background-secundary);
-    box-shadow: inset 3px -3px 8px #000000b4;
-    
+    box-shadow: inset 3px -3px 8px var(--cor-shadow);
+    height: 75vh;
+
     h2
     {
         font-size: 3em;
@@ -29,7 +41,7 @@ body
     
         margin-bottom: 50px;
         text-align: center;
-        text-shadow: 3px 3px 6px #000000cc;
+        text-shadow: 3px 3px 6px var(--cor-shadow);
     }
     
     p
@@ -37,6 +49,32 @@ body
         text-indent: 1.5em;
         text-align: justify;
     }
+
+    .content-image
+    {
+        display: flex;
+        align-items: center;
+        
+    }
+}
+
+.progress-bar
+{
+    width: 500px;
+    height: 20px;
+    overflow: hidden;
+    
+    border-radius: 100px;
+    box-shadow: inset -1px -2px 4px 3px var(--cor-shadow), inset 1px 2px 4px 3px var(--cor-shadow);
+}
+
+.current-progress
+{
+    width: 50%;
+    height: 100%;
+    background-color: green;
+    border-radius: 100px;
+    box-shadow: inset -1px -2px 4px 3px var(--cor-shadow), inset 1px 2px 4px 3px rgba(255, 255, 255, 0.774);
 }
 
 .intermediary
@@ -44,5 +82,5 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 50px;
+    margin: 75px;
 }
