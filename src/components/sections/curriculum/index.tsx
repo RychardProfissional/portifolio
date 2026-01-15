@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Download, FileText, X, Briefcase, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const experiences = [
   {
@@ -12,7 +13,7 @@ const experiences = [
     company: "Fundação MT",
     description:
       "Atuação no desenvolvimento full stack, contribuindo para sistemas internos e aprimorando fluxos operacionais com foco em performance e escalabilidade.",
-    tags: ["React", "Node.js", "PostgreSQL"],
+    tags: ["Laravel", "React Native", "Electron"],
   },
   {
     year: "2024 - 2025",
@@ -20,7 +21,7 @@ const experiences = [
     company: "Mavielo RH",
     description:
       "Responsável pelo levantamento de requisitos, planejamento de entregas e desenvolvimento de soluções web personalizadas para clientes.",
-    tags: ["Next.js", "TypeScript", "AWS"],
+    tags: ["AWS", "Terraform", "Google Cloud"],
   },
   {
     year: "2024",
@@ -28,7 +29,7 @@ const experiences = [
     company: "Mavielo RH",
     description:
       "Manutenção de sistemas legados e desenvolvimento de novas features utilizando Go e arquitetura serverless.",
-    tags: ["Go", "Lambda", "DynamoDB"],
+    tags: ["Go", "Lambda", "Next.js"],
   },
   {
     year: "2023 - 2024",
@@ -36,7 +37,7 @@ const experiences = [
     company: "Atacadão",
     description:
       "Suporte técnico, manutenção de hardware e garantia da disponibilidade dos sistemas operacionais da loja.",
-    tags: ["Suporte", "Redes", "Hardware"],
+    tags: ["PHP", "Redes", "Hardware"],
   },
   {
     year: "2023",
@@ -147,16 +148,43 @@ export default function CurriculumSection() {
               transition={{ delay: 0.4 }}
               className="sticky top-24"
             >
-              <div className="rounded-3xl bg-linear-to-br from-primary/5 to-accent/5 border border-border p-8 text-center">
-                <div className="w-20 h-20 mx-auto bg-background rounded-2xl flex items-center justify-center shadow-sm mb-6">
-                  <FileText className="w-10 h-10 text-primary" />
-                </div>
+              <div className="rounded-3xl bg-linear-to-br from-primary/5 to-accent/5 border border-border p-8 text-center relative">
+                {!showPDF && (
+                  <motion.div
+                    layoutId="cv-icon-container"
+                    className="mx-auto mb-6 w-20 h-20 bg-background rounded-2xl flex items-center justify-center shadow-sm z-10"
+                    transition={{ type: "spring", stiffness: 200, damping: 25 }}
+                  >
+                    <motion.div layoutId="cv-icon-inner">
+                      <FileText className="w-10 h-10 text-primary" />
+                    </motion.div>
+                  </motion.div>
+                )}
 
-                <h3 className="text-2xl font-bold mb-2">Currículo Completo</h3>
-                <p className="text-muted-foreground mb-8">
-                  Baixe meu CV para ver detalhes completos sobre minha formação
-                  e skills.
-                </p>
+                {showPDF && (
+                  <motion.div
+                    layoutId="cv-icon-container"
+                    className="absolute top-4 right-4 w-10 h-10 rounded-2xl flex items-center justify-center shadow-sm z-10"
+                    transition={{ type: "spring", stiffness: 200, damping: 25 }}
+                  >
+                    <motion.div layoutId="cv-icon-inner">
+                      <FileText className="w-5 h-5 text-primary" />
+                    </motion.div>
+                  </motion.div>
+                )}
+
+                <motion.div layout className="flex flex-col">
+                  <h3 className="text-2xl font-bold">Currículo Completo</h3>
+                  <p
+                    className={cn(
+                      "text-muted-foreground transition-all duration-300",
+                      !showPDF ? "mb-8" : "mb-2"
+                    )}
+                  >
+                    Baixe meu CV para ver detalhes completos sobre minha
+                    formação e skills.
+                  </p>
+                </motion.div>
 
                 {!showPDF ? (
                   <div className="space-y-4">
